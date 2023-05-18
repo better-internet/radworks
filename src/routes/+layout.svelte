@@ -1,17 +1,23 @@
 <script lang="ts">
+  import './styles/fonts.css';
   import './styles/colors.css';
   import themeStore from '../lib/stores/theme.store';
+  import Header from '$lib/components/header/header.svelte';
 
   const { primaryColor } = themeStore;
 </script>
 
-<main data-theme={$themeStore.currentTheme} data-primary-color={$primaryColor}>
-  <slot />
-</main>
+<div class="wrapper" data-theme={$themeStore.currentTheme} data-primary-color={$primaryColor}>
+  <Header />
+  <main>
+    <slot />
+  </main>
+</div>
 
 <style>
-  main {
+  .wrapper {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    min-height: 100svh;
   }
 </style>
