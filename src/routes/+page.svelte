@@ -1,5 +1,6 @@
 <script>
   import Button from '$lib/components/button/button.svelte';
+  import Floater from '$lib/components/floater/floater.svelte';
   import PixelPen from '$lib/components/illustrations/pixel-pen.svelte';
 </script>
 
@@ -14,6 +15,18 @@
       <div class="pen-illustration"><PixelPen /></div>
     </div>
   </div>
+  <Floater imgUrl="./img/discord.svg" title="Discord" btnTxt="Check out the Discord">
+    <div class="discord">
+      <p>Let’s chat on Discord!</p>
+      <img src="./img/baby-keyboard-smash.gif" alt="" />
+      <p>waddap</p>
+    </div>
+  </Floater>
+  <Floater imgUrl="./img/twitter.svg" title="Twitter" btnTxt="Follow us on Twitter">
+    <div class="twitter">
+      <p>Keep up with our tweets</p>
+    </div>
+  </Floater>
   <div class="projects" data-theme="dark">
     <h1>Projects</h1>
     <div class="projects-container">
@@ -23,15 +36,15 @@
           <Button on:click={() => console.log('https://radicle.xyz')}>Check out Radicle</Button>
         </h2>
         <p class="subheader">A p2p network for code collaboration.</p>
-        <img class="project-image" src="./img/social-share.png" alt="" />
+        <img class="project-image" src="./img/rad@2x.png" alt="" />
       </div>
-      <div class="project">
+      <div class="project drips">
         <h2>
           Drips
           <Button on:click={() => console.log('https://www.drips.network')}>Check out Drips</Button>
         </h2>
         <p class="subheader">A toolkit for automatic, recurring payments.</p>
-        <img class="project-image" src="./img/social-share.png" alt="" />
+        <img class="project-image" src="./img/drips@2x.png" alt="" />
       </div>
     </div>
   </div>
@@ -65,6 +78,57 @@
     pointer-events: none;
   }
 
+  .discord {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 8px;
+    margin: 32px;
+  }
+
+  .discord p {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    margin: 0;
+    background-color: var(--color-primary);
+    border-radius: 24px 24px 24px 4px;
+
+    font-family: 'Terminal Grotesque';
+    color: var(--color-background);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    font-feature-settings: 'ss02' on, 'ss01' on;
+    width: fit-content;
+  }
+
+  .discord p:last-child {
+    background-color: var(--color-foreground-level-5);
+  }
+
+  .discord img {
+    border-radius: 24px 24px 4px 24px;
+    width: 180px;
+  }
+
+  .twitter {
+    margin: 24px 32px;
+  }
+
+  .twitter p {
+    font-family: 'Terminal Grotesque';
+    color: var(--color-background);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    font-feature-settings: 'ss02' on, 'ss01' on;
+    width: fit-content;
+    margin: 0;
+  }
+
   .projects {
     background-color: var(--color-foreground);
     padding: 32px;
@@ -83,6 +147,10 @@
     line-height: 62px;
     margin: 0;
     color: var(--color-primary);
+  }
+
+  .drips {
+    margin-top: 198px;
   }
 
   .project h2 {
