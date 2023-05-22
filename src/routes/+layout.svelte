@@ -1,6 +1,7 @@
 <script lang="ts">
   import './styles/fonts.css';
   import './styles/colors.css';
+  import './styles/elevation.css';
   import themeStore from '../lib/stores/theme.store';
   import Header from '$lib/components/header/header.svelte';
 
