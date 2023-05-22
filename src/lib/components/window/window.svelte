@@ -119,6 +119,7 @@
     border-radius: 4px 4px 32px 32px;
     overflow: hidden;
     box-shadow: var(--elevation-high);
+    background-color: var(--color-foreground-level-1);
   }
 
   .content {
@@ -130,7 +131,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    background-color: var(--color-foreground-level-3);
+    background-color: var(--color-foreground-level-2);
   }
 
   .title-bar p {

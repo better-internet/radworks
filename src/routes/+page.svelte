@@ -51,7 +51,7 @@
     grid-area: hero;
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color-background);
+    background-color: var(--color-foreground-level-2);
     padding: 32px;
     color: var(--color-foreground);
     padding-bottom: 256px;
