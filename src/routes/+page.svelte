@@ -119,6 +119,10 @@
     margin: 0;
   }
 
+  img {
+    pointer-events: none;
+  }
+
   .chat img.outgoing {
     align-self: flex-end;
     max-width: 180px;
@@ -130,7 +134,6 @@
 
   .social-windows .dove {
     max-height: 240px;
-    pointer-events: none;
     right: 72px;
     top: 50%;
     transform: translateY(-50%);
