@@ -44,12 +44,12 @@
   --color-negative-level-6: #ffd4d4;
   --color-foreground: #ffffff;
   --color-foreground-level-1: #162029;
-  --color-foreground-level-2: #29343d;
+  --color-foreground-level-2: #28333d;
   --color-foreground-level-3: #333e47;
   --color-foreground-level-4: #5e6d7a;
   --color-foreground-level-5: #8594a1;
   --color-foreground-level-6: #d3dee8;
-  --color-background: #28333d;
+  --color-background: #0e171f;
 }
 
 [data-theme='h4x0r'] {

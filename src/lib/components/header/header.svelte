@@ -19,7 +19,7 @@
 <style>
   header {
     color: var(--color-foreground);
-    background-color: var(--color-background);
+    background-color: var(--color-foreground-level-2);
     padding: 32px;
     display: flex;
   }

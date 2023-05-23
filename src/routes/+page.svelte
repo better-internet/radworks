@@ -1,32 +1,39 @@
 <script>
   import Button from '$lib/components/button/button.svelte';
-  import Floater from '$lib/components/floater/floater.svelte';
+  import DiscordIcon from '$lib/components/illustrations/discord-icon.svelte';
   import PixelPen from '$lib/components/illustrations/pixel-pen.svelte';
+  import TwitterIcon from '$lib/components/illustrations/twitter-icon.svelte';
+  import Window from '$lib/components/window/window.svelte';
 </script>
 
 <div>
   <div class="hero" data-theme="dark">
     <div>
       <p class="big">
-        We fund <span class="open">new technologies</span> to
-        <span class="open">cultivate internet freedom</span>.
+        We fund <span class="open">new technologies</span> to cultivate
+        <span class="open">internet freedom</span>.
       </p>
       <Button>Learn more</Button>
       <div class="pen-illustration"><PixelPen /></div>
     </div>
   </div>
-  <Floater imgUrl="./img/discord.svg" title="Discord" btnTxt="Check out the Discord">
-    <div class="discord">
-      <p>Let’s chat on Discord!</p>
-      <img src="./img/baby-keyboard-smash.gif" alt="" />
-      <p>waddap</p>
-    </div>
-  </Floater>
-  <Floater imgUrl="./img/twitter.svg" title="Twitter" btnTxt="Follow us on Twitter">
-    <div class="twitter">
-      <p>Keep up with our tweets</p>
-    </div>
-  </Floater>
+  <div class="social-windows">
+    <Window icon={DiscordIcon} title="Discord">
+      <div class="chat">
+        <p class="chat-message incoming" data-theme="dark">Let’s chat on Discord!</p>
+        <img class="outgoing" src="/keyboard-kid.png" alt="kid smashing keyboard" />
+        <p class="chat-message outgoing" data-theme="dark">Waddap</p>
+      </div>
+      <Button>Check out the Discord</Button>
+    </Window>
+    <Window icon={TwitterIcon} title="Twitter">
+      <div class="twitter">
+        <p>Keep up with our tweets</p>
+        <Button>Follow us on Twitter</Button>
+      </div>
+    </Window>
+    <img class="dove" src="/dove.png" alt="dove" />
+  </div>
   <div class="projects" data-theme="dark">
     <h1>Projects</h1>
     <div class="projects-container">
@@ -47,18 +54,28 @@
         <img class="project-image" src="./img/drips@2x.png" alt="" />
       </div>
     </div>
-  </div>
 </div>
 
 <style>
   .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      'hero hero'
+      'socials socials';
+  }
+
+  .hero {
+    display: flex;
+    grid-area: hero;
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color-background);
+    background-color: var(--color-foreground-level-2);
     padding: 32px;
     color: var(--color-foreground);
+    padding-bottom: 256px;
+    margin-bottom: -256px;
   }
 
   .hero div {
@@ -76,57 +93,6 @@
     bottom: 8px;
     left: -84px;
     pointer-events: none;
-  }
-
-  .discord {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    gap: 8px;
-    margin: 32px;
-  }
-
-  .discord p {
-    display: flex;
-    align-items: center;
-    padding: 8px 16px;
-    margin: 0;
-    background-color: var(--color-primary);
-    border-radius: 24px 24px 24px 4px;
-
-    font-family: 'Terminal Grotesque';
-    color: var(--color-background);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 100%;
-    font-feature-settings: 'ss02' on, 'ss01' on;
-    width: fit-content;
-  }
-
-  .discord p:last-child {
-    background-color: var(--color-foreground-level-5);
-  }
-
-  .discord img {
-    border-radius: 24px 24px 4px 24px;
-    width: 180px;
-  }
-
-  .twitter {
-    margin: 24px 32px;
-  }
-
-  .twitter p {
-    font-family: 'Terminal Grotesque';
-    color: var(--color-background);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 100%;
-    font-feature-settings: 'ss02' on, 'ss01' on;
-    width: fit-content;
-    margin: 0;
   }
 
   .projects {
@@ -186,5 +152,72 @@
     border-radius: 4px 4px 24px 24px;
     object-fit: 'contain';
     width: 100%;
+  .social-windows {
+    display: flex;
+    justify-content: flex-end;
+    grid-area: socials;
+    gap: 10%;
+    padding: 98px 10% 0 0;
+    align-items: center;
+    position: relative;
+  }
+
+  .social-windows p {
+    margin: 0 0 16px 0;
+  }
+
+  .chat-message {
+    width: fit-content;
+  }
+
+  .chat-message.incoming {
+    background-color: var(--color-primary);
+    color: var(--color-foreground);
+    padding: 8px 16px;
+    border-radius: 24px 24px 24px 4px;
+  }
+
+  .chat-message.outgoing {
+    background-color: var(--color-foreground-level-5);
+    color: var(--color-foreground);
+    padding: 8px 16px;
+    align-self: flex-end;
+    border-radius: 24px 24px 4px 24px;
+  }
+
+  .chat {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
+  .chat p {
+    margin: 0;
+  }
+
+  img {
+    pointer-events: none;
+  }
+
+  .chat img.outgoing {
+    align-self: flex-end;
+    max-width: 180px;
+  }
+
+  .social-windows .twitter {
+    padding-right: 32px;
+  }
+
+  .social-windows .dove {
+    max-height: 240px;
+    right: 72px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+  }
+
+  .hero p {
+    margin: 0 0 32px 0;
   }
 </style>

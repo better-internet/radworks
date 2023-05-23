@@ -50,7 +50,14 @@ p.big,
 .body.big {
   font-size: 48px;
   line-height: 120%;
-  font-feature-settings: 'ss02' on, 'ss01' on;
+}
+
+p.tiny,
+.body.tiny {
+  font-size: 16px;
+  line-height: 150%;
+  leading-trim: both;
+  text-edge: cap;
 }
 
 p.big.open,
