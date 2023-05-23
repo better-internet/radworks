@@ -54,6 +54,7 @@
         <img class="project-image" src="./img/drips@2x.png" alt="" />
       </div>
     </div>
+  </div>
 </div>
 
 <style>
@@ -152,6 +153,7 @@
     border-radius: 4px 4px 24px 24px;
     object-fit: 'contain';
     width: 100%;
+  }
   .social-windows {
     display: flex;
     justify-content: flex-end;
