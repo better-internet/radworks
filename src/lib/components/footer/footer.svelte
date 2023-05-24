@@ -23,7 +23,10 @@
 
   nav {
     display: flex;
-    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 32px;
+    row-gap: 12px;
     align-items: center;
   }
 </style>

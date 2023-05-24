@@ -10,6 +10,7 @@
   </div>
   <nav>
     <NavLink theme="dark" href="#">About</NavLink>
+    <NavLink theme="dark" href="#">Projects</NavLink>
     <NavLink theme="dark" href="#">Blog</NavLink>
     <NavLink theme="dark" href="#">Twitter</NavLink>
     <NavLink theme="dark" href="#">Discord</NavLink>
@@ -51,7 +52,16 @@
 
   nav {
     display: flex;
-    gap: 32px;
+    column-gap: 32px;
+    row-gap: 12px;
     align-items: center;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 800px) {
+    header {
+      flex-direction: column;
+      gap: 24px;
+    }
   }
 </style>

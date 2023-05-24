@@ -3,12 +3,12 @@
   import DiscordIcon from '$lib/components/illustrations/discord-icon.svelte';
   import ForumIllustration from '$lib/components/illustrations/forum-illustration.svelte';
   import PixelPen from '$lib/components/illustrations/pixel-pen.svelte';
-  import PositionsIcon from '$lib/components/illustrations/positions-icon.svelte';
+  import JobsIcon from '$lib/components/illustrations/jobs-icon.svelte';
   import TwitterIcon from '$lib/components/illustrations/twitter-icon.svelte';
   import Window from '$lib/components/window/window.svelte';
 </script>
 
-<div>
+<div style="overflow: hidden">
   <div class="hero" data-theme="dark">
     <div>
       <p class="big">
@@ -69,10 +69,10 @@
           <Button>Visit Snapshot</Button>
         </Window>
       </div>
-      <div class="positions">
-        <Window icon={PositionsIcon} title="Open positions">
+      <div class="jobs">
+        <Window icon={JobsIcon} title="Open jobs">
           <h2>Work here</h2>
-          <Button>View open positions</Button>
+          <Button>View open jobs</Button>
         </Window>
       </div>
       <div class="governance">
@@ -130,9 +130,6 @@
     grid-template-areas:
       'hero hero'
       'socials socials';
-  }
-
-  .hero {
     display: flex;
     grid-area: hero;
     display: flex;
@@ -163,52 +160,9 @@
     bottom: 8px;
     left: -84px;
     pointer-events: none;
-  }
-
-  .projects {
-    background-color: var(--color-foreground);
-    padding: 32px;
-    margin-bottom: 140px;
-  }
-
-  .projects-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-  }
-
-  .drips {
-    margin-top: 198px;
-  }
-
-  .project h2 {
-    height: 70px;
-    font-size: 112px;
-    margin: 64px 0 32px;
-    padding-left: 24px;
-  }
-
-  .project p.subheader {
-    display: flex;
-    align-items: center;
-    padding: 6px 24px;
-    height: 36px;
-    width: -webkit-fit-content;
     width: fit-content;
-
-    /* Greys (Light)/background */
-    color: var(--color-background);
-    background: var(--color-foreground);
-    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 60px;
   }
 
-  .project-image {
-    filter: drop-shadow(24px 20px 68px rgba(0, 0, 0, 0.25));
-    border-radius: 4px 4px 24px 24px;
-    object-fit: 'contain';
-    width: 100%;
-  }
   .social-windows {
     display: flex;
     justify-content: flex-end;
@@ -270,6 +224,7 @@
     max-height: 240px;
     right: -10px;
     top: 50%;
+    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     position: absolute;
     z-index: 2;
@@ -277,6 +232,51 @@
 
   .social-windows p {
     margin: 0 0 16px 0;
+  }
+
+  .projects {
+    background-color: var(--color-foreground);
+    padding: 32px;
+    margin-bottom: 140px;
+  }
+
+  .projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .drips {
+    margin-top: 198px;
+  }
+
+  .project h2 {
+    display: flex;
+    font-size: 112px;
+    margin: 64px 0 0 0;
+    padding-left: 24px;
+    justify-content: flex-start;
+  }
+
+  .project p.subheader {
+    display: flex;
+    align-items: center;
+    padding: 6px 24px;
+    width: -webkit-fit-content;
+    width: fit-content;
+
+    /* Greys (Light)/background */
+    color: var(--color-background);
+    background: var(--color-foreground);
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 60px;
+  }
+
+  .project-image {
+    filter: drop-shadow(24px 20px 68px rgba(0, 0, 0, 0.25));
+    border-radius: 4px 4px 24px 24px;
+    object-fit: 'contain';
+    width: 100%;
   }
 
   .resources {
@@ -299,7 +299,7 @@
     white-space: nowrap;
   }
 
-  .positions h2 {
+  .jobs h2 {
     color: var(--color-foreground);
     font-size: 76px;
     margin: 0 0 20px 0;
@@ -322,7 +322,7 @@
     left: -10px;
   }
 
-  .positions {
+  .jobs {
     grid-column-start: 7;
     grid-row-start: 1;
   }
@@ -355,5 +355,81 @@
     top: -50px;
     left: -108px;
     z-index: 0;
+  }
+
+  @media screen and (max-width: 1060px) {
+    .projects-container {
+      grid-template-columns: 1fr;
+    }
+    .drips {
+      margin-top: 0;
+    }
+    .resources h1 {
+      margin-top: 0px;
+      padding-bottom: 0px;
+    }
+
+    .resources-container {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      margin-top: 100px;
+      padding: 0 6vw;
+    }
+    .blog,
+    .jobs {
+      align-self: flex-end;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    h1 {
+      font-size: 10vw;
+    }
+
+    .project h2 {
+      font-size: 15vw;
+    }
+
+    .hero {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        'hero'
+        'socials';
+      justify-content: flex-start;
+    }
+
+    .hero div {
+      width: 100%;
+    }
+
+    .hero .pen-illustration {
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+      left: 144px;
+    }
+
+    .social-windows {
+      justify-content: flex-start;
+      padding: 32px 0 0 0;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .social-windows .dove {
+      top: auto;
+      transform: translateY(0%);
+      -webkit-transform: translateY(0%);
+      bottom: -10px;
+      right: -120px;
+    }
+  }
+
+  @media screen and (max-width: 540px) {
+    .project h2 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 </style>
