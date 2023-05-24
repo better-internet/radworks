@@ -9,10 +9,10 @@
     <span class="wordmark">rad<span class="open">works</span></span>
   </div>
   <nav>
-    <NavLink href="#">About</NavLink>
-    <NavLink href="#">Blog</NavLink>
-    <NavLink href="#">Twitter</NavLink>
-    <NavLink href="#">Discord</NavLink>
+    <NavLink theme="dark" href="#">About</NavLink>
+    <NavLink theme="dark" href="#">Blog</NavLink>
+    <NavLink theme="dark" href="#">Twitter</NavLink>
+    <NavLink theme="dark" href="#">Discord</NavLink>
   </nav>
 </header>
 

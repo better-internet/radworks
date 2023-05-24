@@ -7,6 +7,7 @@
 
   let windowElem: HTMLDivElement;
 
+  let hover = false;
   let behindElemSize: { w: number; h: number } = { w: 0, h: 0 };
 
   function updateBehindElemSize() {
@@ -86,21 +87,30 @@
     window.onmouseup = null;
     window.onmousemove = null;
   }
+
+  $: console.log(hover);
 </script>
 
 <div class="wrapper">
   <div
     class="window"
+    class:hover
     bind:this={windowElem}
     on:mousedown={startDragging}
+    on:mouseenter={() => (hover = true)}
+    on:mouseleave={() => (hover = false)}
     style:transform="translate({$windowOffset.x}px, {$windowOffset.y}px)"
   >
-    <div class="title-bar">
-      <div class="icon">
-        <svelte:component this={icon} />
+    {#if title}
+      <div class="title-bar">
+        {#if icon}
+          <div class="icon">
+            <svelte:component this={icon} />
+          </div>
+        {/if}
+        <p class="tiny">{title}</p>
       </div>
-      <p class="tiny">{title}</p>
-    </div>
+    {/if}
     <div class="content">
       <slot />
     </div>
@@ -117,9 +127,15 @@
     user-select: none;
     cursor: grab;
     border-radius: 4px 4px 32px 32px;
-    overflow: hidden;
     box-shadow: var(--elevation-high);
     background-color: var(--color-foreground-level-1);
+    z-index: 1;
+  }
+
+  .hover {
+    background-blend-mode: soft-light;
+    mix-blend-mode: normal;
+    box-shadow: 24px 20px 68px #53db53;
   }
 
   .content {

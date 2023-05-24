@@ -4,6 +4,7 @@
   import './styles/elevation.css';
   import themeStore from '../lib/stores/theme.store';
   import Header from '$lib/components/header/header.svelte';
+  import Footer from '$lib/components/footer/footer.svelte';
 
   const { primaryColor } = themeStore;
 </script>
@@ -13,6 +14,7 @@
   <main>
     <slot />
   </main>
+  <Footer />
 </div>
 
 <style>

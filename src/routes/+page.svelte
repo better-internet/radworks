@@ -1,12 +1,14 @@
 <script>
   import Button from '$lib/components/button/button.svelte';
   import DiscordIcon from '$lib/components/illustrations/discord-icon.svelte';
+  import ForumIllustration from '$lib/components/illustrations/forum-illustration.svelte';
   import PixelPen from '$lib/components/illustrations/pixel-pen.svelte';
+  import PositionsIcon from '$lib/components/illustrations/positions-icon.svelte';
   import TwitterIcon from '$lib/components/illustrations/twitter-icon.svelte';
   import Window from '$lib/components/window/window.svelte';
 </script>
 
-<div class="home">
+<div>
   <div class="hero" data-theme="dark">
     <div>
       <p class="big">
@@ -21,7 +23,7 @@
     <Window icon={DiscordIcon} title="Discord">
       <div class="chat">
         <p class="chat-message incoming" data-theme="dark">Let’s chat on Discord!</p>
-        <img class="outgoing" src="/keyboard-kid.png" alt="kid smashing keyboard" />
+        <img class="outgoing" src="img/keyboard-kid.gif" alt="kid smashing keyboard" />
         <p class="chat-message outgoing" data-theme="dark">Waddap</p>
       </div>
       <Button>Check out the Discord</Button>
@@ -32,12 +34,96 @@
         <Button>Follow us on Twitter</Button>
       </div>
     </Window>
-    <img class="dove" src="/dove.png" alt="dove" />
+    <img class="dove" src="img/flying-dove.gif" alt="dove" />
+  </div>
+  <div class="projects" data-theme="dark">
+    <h1>Projects</h1>
+    <div class="projects-container">
+      <div class="project">
+        <h2>
+          Radicle
+          <Button on:click={() => console.log('https://radicle.xyz')}>Check out Radicle</Button>
+        </h2>
+        <p class="subheader">A p2p network for code collaboration.</p>
+        <img class="project-image" src="./img/rad@2x.png" alt="" />
+      </div>
+      <div class="project drips">
+        <h2>
+          Drips
+          <Button on:click={() => console.log('https://www.drips.network')}>Check out Drips</Button>
+        </h2>
+        <p class="subheader">A toolkit for automatic, recurring payments.</p>
+        <img class="project-image" src="./img/drips@2x.png" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="resources">
+    <h1>Resources</h1>
+    <div class="resources-container">
+      <div class="forum">
+        <Window>
+          <div class="forum-image">
+            <ForumIllustration />
+          </div>
+          <h3>Hash out ideas</h3>
+          <Button>Visit Snapshot</Button>
+        </Window>
+      </div>
+      <div class="positions">
+        <Window icon={PositionsIcon} title="Open positions">
+          <h2>Work here</h2>
+          <Button>View open positions</Button>
+        </Window>
+      </div>
+      <div class="governance">
+        <Window title="Vote">
+          <p>Get involved in<br />governance.</p>
+          <Button>Visit Snapshot</Button>
+        </Window>
+        <img class="governance-image" src="img/voted@2x.png" alt="voted" />
+      </div>
+      <div class="blog">
+        <Window>
+          <img class="blog-image" src="img/silver-liquid.gif" alt="liquid metal gif" />
+          <h3>Mirror, <span class="open">mirror</span></h3>
+          <p>Get updates and insights.</p>
+          <Button>Read the blog</Button>
+        </Window>
+      </div>
+    </div>
   </div>
 </div>
 
 <style>
-  .home {
+  h1 {
+    font-family: Terminal Grotesque Open;
+    font-size: 76px;
+    font-weight: 400;
+    line-height: 62px;
+    margin: 0;
+    color: var(--color-primary);
+  }
+
+  h2 {
+    font-family: Terminal Grotesque;
+    font-weight: 400;
+    color: var(--color-background);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  h3 {
+    font-family: 'Terminal Grotesque';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    font-feature-settings: 'ss02' on, 'ss01' on;
+    margin: 0;
+  }
+
+  .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
@@ -67,6 +153,10 @@
     max-width: 576px;
   }
 
+  .hero p {
+    margin: 0 0 32px 0;
+  }
+
   .hero .pen-illustration {
     height: 32px;
     position: absolute;
@@ -75,6 +165,50 @@
     pointer-events: none;
   }
 
+  .projects {
+    background-color: var(--color-foreground);
+    padding: 32px;
+    margin-bottom: 140px;
+  }
+
+  .projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .drips {
+    margin-top: 198px;
+  }
+
+  .project h2 {
+    height: 70px;
+    font-size: 112px;
+    margin: 64px 0 32px;
+    padding-left: 24px;
+  }
+
+  .project p.subheader {
+    display: flex;
+    align-items: center;
+    padding: 6px 24px;
+    height: 36px;
+    width: -webkit-fit-content;
+    width: fit-content;
+
+    /* Greys (Light)/background */
+    color: var(--color-background);
+    background: var(--color-foreground);
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 60px;
+  }
+
+  .project-image {
+    filter: drop-shadow(24px 20px 68px rgba(0, 0, 0, 0.25));
+    border-radius: 4px 4px 24px 24px;
+    object-fit: 'contain';
+    width: 100%;
+  }
   .social-windows {
     display: flex;
     justify-content: flex-end;
@@ -134,13 +268,92 @@
 
   .social-windows .dove {
     max-height: 240px;
-    right: 72px;
+    right: -10px;
     top: 50%;
     transform: translateY(-50%);
     position: absolute;
+    z-index: 2;
   }
 
-  .hero p {
-    margin: 0 0 32px 0;
+  .social-windows p {
+    margin: 0 0 16px 0;
+  }
+
+  .resources {
+    background-color: var(--color-foreground-level-2);
+    padding: 32px;
+  }
+
+  .resources h1 {
+    margin-top: -240px;
+    padding-bottom: 60px;
+  }
+
+  .resources-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(12, minmax(auto, 80px));
+    grid-column-gap: 48px;
+    grid-template-rows: repeat(16, 42px);
+    grid-row-gap: 0px;
+    white-space: nowrap;
+  }
+
+  .positions h2 {
+    color: var(--color-foreground);
+    font-size: 76px;
+    margin: 0 0 20px 0;
+  }
+
+  .forum {
+    grid-column-start: 2;
+    grid-row-start: 5;
+    position: relative;
+  }
+
+  .forum h3 {
+    margin-top: 140px;
+    margin-bottom: 8px;
+  }
+
+  .forum .forum-image {
+    position: absolute;
+    top: -120px;
+    left: -10px;
+  }
+
+  .positions {
+    grid-column-start: 7;
+    grid-row-start: 1;
+  }
+
+  .blog {
+    position: relative;
+    grid-column-start: 6;
+    grid-row-start: 11;
+  }
+
+  .blog .blog-image {
+    position: absolute;
+    max-height: 224px;
+    right: -80px;
+    top: -110px;
+  }
+
+  .governance {
+    position: relative;
+    grid-column-start: 10;
+    grid-row-start: 9;
+  }
+  .governance p {
+    margin-top: 0px;
+  }
+
+  .governance .governance-image {
+    position: absolute;
+    max-width: 420px;
+    top: -50px;
+    left: -108px;
+    z-index: 0;
   }
 </style>
