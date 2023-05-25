@@ -2,8 +2,8 @@
   import { type ComponentType, onMount } from 'svelte';
   import { spring } from 'svelte/motion';
 
-  export let title: string;
-  export let icon: ComponentType;
+  export let title: string | undefined = undefined;
+  export let icon: ComponentType | undefined = undefined;
 
   let windowElem: HTMLDivElement;
 
