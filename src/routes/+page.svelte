@@ -36,7 +36,7 @@
     </Window>
     <img class="dove" src="img/flying-dove.gif" alt="dove" />
   </div>
-  <div class="projects" data-theme="dark">
+  <div class="projects">
     <h1>Projects</h1>
     <div class="projects-container">
       <div class="project">
@@ -107,7 +107,7 @@
   h2 {
     font-family: Terminal Grotesque;
     font-weight: 400;
-    color: var(--color-background);
+    color: var(--color-foreground);
     display: flex;
     align-items: center;
     gap: 24px;
@@ -235,7 +235,7 @@
   }
 
   .projects {
-    background-color: var(--color-foreground);
+    background-color: var(--color-background);
     padding: 32px;
     margin-bottom: 140px;
   }
@@ -264,12 +264,12 @@
     padding: 6px 24px;
     width: -webkit-fit-content;
     width: fit-content;
-
-    /* Greys (Light)/background */
-    color: var(--color-background);
-    background: var(--color-foreground);
+    color: var(--color-foreground);
+    background: var(--color-background);
     box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.25);
     border-radius: 60px;
+    position: relative;
+    z-index: 1;
   }
 
   .project-image {
