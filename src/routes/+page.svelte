@@ -23,7 +23,7 @@
     <Window icon={DiscordIcon} title="Discord">
       <div class="chat">
         <p class="chat-message incoming" data-theme="dark">Let’s chat on Discord!</p>
-        <img class="outgoing" src="img/keyboard-kid.gif" alt="kid smashing keyboard" />
+        <img class="outgoing chat-message" src="img/keyboard-kid.gif" alt="kid smashing keyboard" />
         <p class="chat-message outgoing" data-theme="dark">Waddap</p>
       </div>
       <Button>Check out the Discord</Button>
@@ -194,6 +194,10 @@
     padding: 8px 16px;
     align-self: flex-end;
     border-radius: 24px 24px 4px 24px;
+  }
+
+  img.chat-message.outgoing {
+    padding: 0;
   }
 
   .chat {
