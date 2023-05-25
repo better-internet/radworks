@@ -21,7 +21,7 @@
     const resizeObserver = new ResizeObserver(updateBehindElemSize);
     resizeObserver.observe(windowElem);
 
-    return resizeObserver.unobserve;
+    return resizeObserver.disconnect;
   });
 
   let isDragging = false;
@@ -87,8 +87,6 @@
     window.onmouseup = null;
     window.onmousemove = null;
   }
-
-  $: console.log(hover);
 </script>
 
 <div class="wrapper">
@@ -130,6 +128,7 @@
     box-shadow: var(--elevation-high);
     background-color: var(--color-foreground-level-1);
     z-index: 1;
+    transition: box-shadow 0.3s;
   }
 
   .hover {
