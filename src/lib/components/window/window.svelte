@@ -20,8 +20,6 @@
   onMount(() => {
     const resizeObserver = new ResizeObserver(updateBehindElemSize);
     resizeObserver.observe(windowElem);
-
-    return resizeObserver.disconnect;
   });
 
   let isDragging = false;

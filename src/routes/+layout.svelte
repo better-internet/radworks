@@ -10,11 +10,11 @@
 </script>
 
 <div class="wrapper" data-theme={$themeStore.currentTheme} data-primary-color={$primaryColor}>
-  <Header />
   <main>
+    <Header />
     <slot />
+    <Footer />
   </main>
-  <Footer />
 </div>
 
 <style>
@@ -22,5 +22,11 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     min-height: 100svh;
+  }
+
+  main {
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
   }
 </style>

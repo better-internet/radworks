@@ -8,7 +8,7 @@
   import Window from '$lib/components/window/window.svelte';
 </script>
 
-<div style="overflow: hidden">
+<div>
   <div class="hero" data-theme="dark">
     <div>
       <p class="big">
@@ -382,6 +382,12 @@
     }
   }
 
+  @media screen and (min-width: 1920px) {
+    .hero {
+      border-radius: 0 0 32px 32px;
+    }
+  }
+
   @media screen and (max-width: 800px) {
     h1 {
       font-size: 10vw;
@@ -423,6 +429,16 @@
       -webkit-transform: translateY(0%);
       bottom: -10px;
       right: -120px;
+    }
+  }
+
+  @media screen and (min-width: 1582px) {
+    .projects {
+      margin-top: -224px;
+    }
+
+    .resources {
+      border-radius: 32px 32px 0 0;
     }
   }
 
