@@ -168,7 +168,7 @@
     justify-content: flex-end;
     grid-area: socials;
     gap: 10%;
-    padding: 98px 10% 0 0;
+    padding: 98px 8% 0 0;
     align-items: center;
     position: relative;
   }
@@ -224,12 +224,11 @@
     padding-right: 32px;
   }
 
-  .social-windows .dove {
-    max-height: 240px;
-    right: -10px;
+  .dove {
+    height: 240px;
+    right: 8%;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    transform: translate(50%, -50%);
     position: absolute;
     z-index: 2;
   }
@@ -427,12 +426,9 @@
       gap: 32px;
     }
 
-    .social-windows .dove {
-      top: auto;
-      transform: translateY(0%);
-      -webkit-transform: translateY(0%);
-      bottom: -10px;
-      right: -120px;
+    .dove {
+      right: 50%;
+      transform: translate(320px, 50px);
     }
   }
 
@@ -450,6 +446,36 @@
     .project h2 {
       flex-direction: column;
       align-items: flex-start;
+    }
+
+    .resources {
+      padding: 8px;
+    }
+
+    .projects {
+      padding: 16px 8px;
+      margin-bottom: 24px;
+    }
+
+    .dove {
+      display: none;
+    }
+
+    .resources-container {
+      padding: 0;
+    }
+
+    .resources-container {
+      align-items: center;
+    }
+
+    .jobs h2 {
+      font-size: 48px;
+    }
+
+    .blog,
+    .jobs {
+      align-self: center;
     }
   }
 </style>
