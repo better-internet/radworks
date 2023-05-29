@@ -29,12 +29,12 @@
       <Button>Check out the Discord</Button>
     </Window>
     <Window icon={TwitterIcon} title="Twitter">
+      <img class="dove" src="img/flying-dove.gif" alt="flying dove gif" />
       <div class="twitter">
         <p>Keep up with our tweets</p>
         <Button>Follow us on Twitter</Button>
       </div>
     </Window>
-    <img class="dove" src="img/flying-dove.gif" alt="dove" />
   </div>
   <div class="projects">
     <h1>Projects</h1>
@@ -228,9 +228,9 @@
 
   .dove {
     height: 240px;
-    right: 8%;
-    top: 50%;
-    transform: translate(50%, -50%);
+    top: 0;
+    right: 0;
+    transform: translate(55%, -35%);
     position: absolute;
     z-index: 2;
   }
