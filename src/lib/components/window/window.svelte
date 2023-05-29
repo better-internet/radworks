@@ -144,6 +144,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    border-radius: 4px 4px 0 0;
     background-color: var(--color-foreground-level-2);
   }
 
