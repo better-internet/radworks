@@ -159,7 +159,6 @@
   }
 
   .behind {
-    background-color: var(--color-foreground-level-2);
     border-radius: 4px 4px 32px 32px;
     overflow: hidden;
   }
