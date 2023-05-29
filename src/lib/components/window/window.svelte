@@ -4,6 +4,7 @@
 
   export let title: string | undefined = undefined;
   export let icon: ComponentType | undefined = undefined;
+  export let greenGlow = false;
 
   let windowElem: HTMLDivElement;
 
@@ -96,6 +97,7 @@
     on:mouseenter={() => (hover = true)}
     on:mouseleave={() => (hover = false)}
     style:transform="translate({$windowOffset.x}px, {$windowOffset.y}px)"
+    class:green-glow={greenGlow}
   >
     {#if title}
       <div class="title-bar">
@@ -129,9 +131,7 @@
     transition: box-shadow 0.3s;
   }
 
-  .hover {
-    background-blend-mode: soft-light;
-    mix-blend-mode: normal;
+  .window.green-glow {
     box-shadow: 24px 20px 68px #53db53;
   }
 

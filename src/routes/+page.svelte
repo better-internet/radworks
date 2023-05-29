@@ -70,7 +70,7 @@
         </Window>
       </div>
       <div class="jobs">
-        <Window icon={JobsIcon} title="Open jobs">
+        <Window icon={JobsIcon} title="Open jobs" greenGlow>
           <h2>Work here</h2>
           <Button>View open jobs</Button>
         </Window>
