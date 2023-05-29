@@ -78,7 +78,9 @@
       <div class="governance">
         <Window title="Vote">
           <p>Get involved in<br />governance.</p>
-          <Button>Visit Snapshot</Button>
+          <a href="https://boardroom.io/radicle/proposals" target="_blank">
+            <Button>Vote here</Button>
+          </a>
         </Window>
         <img class="governance-image" src="img/voted@2x.png" alt="voted" />
       </div>
