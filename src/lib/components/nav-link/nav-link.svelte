@@ -1,8 +1,9 @@
 <script lang="ts">
   export let href: string;
+  export let target: string | undefined = undefined;
 </script>
 
-<a class="body" {href}>
+<a class="body" {href} {target}>
   <slot />
   <div class="line" />
   <div class="line selection-underline" />

@@ -10,10 +10,10 @@
   </div>
   <nav>
     <NavLink href="#">About</NavLink>
-    <NavLink href="#">Projects</NavLink>
+    <NavLink href="#projects">Projects</NavLink>
     <NavLink href="#">Blog</NavLink>
-    <NavLink href="#">Twitter</NavLink>
-    <NavLink href="#">Discord</NavLink>
+    <NavLink href="https://twitter.com/rad_gov" target="_blank">Twitter</NavLink>
+    <NavLink href="https://discord.gg/radicle" target="_blank">Discord</NavLink>
   </nav>
 </header>
 

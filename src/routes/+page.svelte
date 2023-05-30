@@ -23,7 +23,9 @@
         We fund <span class="open">new technologies</span> to cultivate
         <span class="open">internet freedom</span>.
       </p>
-      <Button>Learn more</Button>
+      <a href="https://docs.radworks.org" target="_blank">
+        <Button>Learn more</Button>
+      </a>
       <div class="pen-illustration"><PixelPen /></div>
     </div>
   </div>
@@ -34,23 +36,29 @@
         <img class="outgoing chat-message" src="img/keyboard-kid.gif" alt="kid smashing keyboard" />
         <p class="chat-message outgoing" data-theme="dark">Waddap</p>
       </div>
-      <Button>Check out the Discord</Button>
+      <a href="https://discord.gg/radicle" target="_blank">
+        <Button>Check out the Discord</Button>
+      </a>
     </Window>
     <Window icon={TwitterIcon} title="Twitter">
       <img class="dove" src="img/flying-dove.gif" alt="flying dove gif" />
       <div class="twitter">
         <p>Keep up with our tweets</p>
-        <Button>Follow us on Twitter</Button>
+        <a href="https://twitter.com/rad_gov" target="_blank">
+          <Button>Follow us on Twitter</Button>
+        </a>
       </div>
     </Window>
   </div>
-  <div class="projects">
+  <div class="projects" id="projects">
     <h1>Projects</h1>
     <div class="projects-container">
       <div class="project">
         <h2>
           Radicle
-          <Button on:click={() => console.log('https://radicle.xyz')}>Check out Radicle</Button>
+          <a href="https://radicle.xyz/" target="_blank">
+            <Button>Check out Radicle</Button>
+          </a>
         </h2>
         <p class="subheader">A p2p network for code collaboration.</p>
         <img class="project-image" src="./img/rad@2x.png" alt="" />
@@ -58,7 +66,9 @@
       <div class="project drips">
         <h2>
           Drips
-          <Button on:click={() => console.log('https://www.drips.network')}>Check out Drips</Button>
+          <a href="https://drips.network/" target="_blank">
+            <Button>Check out Drips</Button>
+          </a>
         </h2>
         <p class="subheader">A toolkit for automatic, recurring payments.</p>
         <img class="project-image" src="./img/drips@2x.png" alt="" />
@@ -74,13 +84,20 @@
             <ForumIllustration />
           </div>
           <h3>Hash out ideas</h3>
-          <Button>Visit Snapshot</Button>
+          <a href="http://radicle.community/" target="_blank">
+            <Button>Visit the forum</Button>
+          </a>
         </Window>
       </div>
       <div class="jobs">
-        <Window icon={JobsIcon} title="Open jobs" greenGlow>
+        <Window icon={JobsIcon} title="Open positions" greenGlow>
           <h2>Work here</h2>
-          <Button>View open jobs</Button>
+          <a
+            href="https://forest-text-046.notion.site/Join-RadicleDAO-12d6577fcc9d455b8626b2134e5166a8"
+            target="_blank"
+          >
+            <Button>View open positions</Button>
+          </a>
         </Window>
       </div>
       <div class="governance">

@@ -4,11 +4,11 @@
 
 <footer>
   <nav>
-    <NavLink href="#">Docs</NavLink>
-    <NavLink href="#">Radicle</NavLink>
-    <NavLink href="#">Drips</NavLink>
-    <NavLink href="#">Twitter</NavLink>
-    <NavLink href="#">Discord</NavLink>
+    <NavLink href="https://docs.radworks.org/" target="_blank">Docs</NavLink>
+    <NavLink href="https://radicle.xyz/" target="_blank">Radicle</NavLink>
+    <NavLink href="https://drips.network/" target="_blank">Drips</NavLink>
+    <NavLink href="https://twitter.com/rad_gov" target="_blank">Twitter</NavLink>
+    <NavLink href="https://discord.gg/radicle" target="_blank">Discord</NavLink>
   </nav>
 </footer>
 
