@@ -185,6 +185,7 @@
     padding: 98px 8% 0 0;
     align-items: center;
     position: relative;
+    pointer-events: none;
   }
 
   .social-windows p {

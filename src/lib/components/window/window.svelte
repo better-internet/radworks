@@ -119,6 +119,10 @@
 </div>
 
 <style>
+  .wrapper {
+    pointer-events: initial;
+  }
+
   .window {
     background-color: var(--color-background);
     position: absolute;
