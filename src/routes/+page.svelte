@@ -105,6 +105,10 @@
 </div>
 
 <style>
+  ::selection {
+    background: #ff80ff;
+  }
+
   h1 {
     font-family: Terminal Grotesque Open;
     font-size: 76px;
