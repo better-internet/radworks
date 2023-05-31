@@ -52,16 +52,25 @@
 
   nav {
     display: flex;
-    column-gap: 32px;
-    row-gap: 12px;
+    gap: 32px;
     align-items: center;
     flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 540px) {
+    header {
+      padding: 16px;
+    }
   }
 
   @media screen and (max-width: 800px) {
     header {
       flex-direction: column;
-      gap: 24px;
+      gap: 16px;
+    }
+
+    nav {
+      gap: 16px;
     }
   }
 </style>

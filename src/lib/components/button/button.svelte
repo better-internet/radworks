@@ -13,6 +13,7 @@
     outline: none;
     border: none;
     padding: 4px 0;
+    white-space: nowrap;
   }
 
   button .inner {

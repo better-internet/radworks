@@ -22,46 +22,54 @@
     </div>
   </div>
   <div class="social-windows">
-    <Window icon={DiscordIcon} title="Discord">
-      <div class="chat">
-        <p class="chat-message incoming" data-theme="dark">Let’s chat on Discord!</p>
-        <img class="outgoing chat-message" src="img/keyboard-kid.gif" alt="kid smashing keyboard" />
-        <p class="chat-message outgoing" data-theme="dark">Waddap</p>
-      </div>
-      <a href="https://discord.gg/radicle" target="_blank">
-        <Button>Check out the Discord</Button>
-      </a>
-    </Window>
-    <Window icon={TwitterIcon} title="Twitter">
-      <img class="dove" src="img/flying-dove.gif" alt="flying dove gif" />
-      <div class="twitter">
-        <p>Keep up with our tweets</p>
-        <a href="https://twitter.com/radworks_" target="_blank">
-          <Button>Follow us on Twitter</Button>
+    <div>
+      <Window icon={DiscordIcon} title="Discord">
+        <div class="chat">
+          <p class="chat-message incoming" data-theme="dark">Let’s chat on Discord!</p>
+          <img
+            class="outgoing chat-message"
+            src="img/keyboard-kid.gif"
+            alt="kid smashing keyboard"
+          />
+          <p class="chat-message outgoing" data-theme="dark">Waddap</p>
+        </div>
+        <a href="https://discord.gg/radicle" target="_blank">
+          <Button>Check out the Discord</Button>
         </a>
-      </div>
-    </Window>
+      </Window>
+    </div>
+    <div>
+      <Window icon={TwitterIcon} title="Twitter">
+        <img class="dove" src="img/flying-dove.gif" alt="flying dove gif" />
+        <div class="twitter">
+          <p>Keep up with our tweets</p>
+          <a href="https://twitter.com/radworks_" target="_blank">
+            <Button>Follow us on Twitter</Button>
+          </a>
+        </div>
+      </Window>
+    </div>
   </div>
   <div class="projects" id="projects">
     <h1>Projects</h1>
     <div class="projects-container">
       <div class="project">
-        <h2>
-          Radicle
+        <div class="title-and-link">
+          <h2>Radicle</h2>
           <a href="https://radicle.xyz/" target="_blank">
             <Button>Check out Radicle</Button>
           </a>
-        </h2>
+        </div>
         <p class="subheader">A p2p network for code collaboration.</p>
         <img class="project-image" src="./img/rad@2x.png" alt="" />
       </div>
       <div class="project drips">
-        <h2>
-          Drips
+        <div class="title-and-link">
+          <h2>Drips</h2>
           <a href="https://drips.network/" target="_blank">
             <Button>Check out Drips</Button>
           </a>
-        </h2>
+        </div>
         <p class="subheader">A toolkit for automatic, recurring payments.</p>
         <img class="project-image" src="./img/drips@2x.png" alt="" />
       </div>
@@ -132,10 +140,8 @@
   h2 {
     font-family: Terminal Grotesque;
     font-weight: 400;
+    margin: 0;
     color: var(--color-foreground);
-    display: flex;
-    align-items: center;
-    gap: 24px;
   }
 
   h3 {
@@ -273,6 +279,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32px;
+    margin-top: 48px;
   }
 
   .drips {
@@ -280,11 +287,14 @@
   }
 
   .project h2 {
-    display: flex;
     font-size: 112px;
-    margin: 64px 0 0 0;
+  }
+
+  .project .title-and-link {
+    display: flex;
+    gap: 24px;
+    align-items: center;
     padding-left: 24px;
-    justify-content: flex-start;
   }
 
   .project p.subheader {
@@ -450,6 +460,15 @@
       padding: 32px 0 0 0;
       flex-direction: column;
       gap: 32px;
+      padding: 16px;
+    }
+
+    .social-windows > *:first-child {
+      align-self: flex-end;
+    }
+
+    .social-windows > *:last-child {
+      align-self: baseline;
     }
 
     .dove {
@@ -469,18 +488,40 @@
   }
 
   @media screen and (max-width: 540px) {
+    .hero {
+      padding: 16px;
+      padding-bottom: 272px;
+    }
+
     .project h2 {
       flex-direction: column;
       align-items: flex-start;
     }
 
+    .project .title-and-link {
+      padding-left: 0;
+      flex-direction: column;
+      align-items: baseline;
+      gap: 16px;
+    }
+
+    .project p.subheader {
+      box-shadow: none;
+      background-color: transparent;
+      padding: 0;
+    }
+
     .resources {
-      padding: 8px;
+      padding: 16px;
     }
 
     .projects {
-      padding: 16px 8px;
+      padding: 32px 16px 16px 16px;
       margin-bottom: 24px;
+    }
+
+    .projects-container {
+      margin-top: 16px;
     }
 
     .dove {

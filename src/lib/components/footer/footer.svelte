@@ -25,8 +25,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 32px;
-    row-gap: 12px;
+    gap: 24px;
     align-items: center;
+  }
+
+  @media screen and (max-width: 800px) {
+    nav {
+      gap: 16px;
+    }
   }
 </style>

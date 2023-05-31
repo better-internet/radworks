@@ -38,4 +38,10 @@
   a:hover .selection-underline {
     transform: scaleX(1);
   }
+
+  @media screen and (max-width: 540px) {
+    a {
+      font-size: 20px;
+    }
+  }
 </style>
