@@ -9,9 +9,9 @@
     <span class="wordmark">rad<span class="open">works</span></span>
   </div>
   <nav>
-    <NavLink href="#">About</NavLink>
+    <NavLink href="https://docs.radworks.org/" target="_blank">About</NavLink>
     <NavLink href="#projects">Projects</NavLink>
-    <NavLink href="#">Blog</NavLink>
+    <NavLink href="https://radworks.mirror.xyz" target="_blank">Blog</NavLink>
     <NavLink href="https://twitter.com/radworks_" target="_blank">Twitter</NavLink>
     <NavLink href="https://discord.gg/radicle" target="_blank">Discord</NavLink>
   </nav>
