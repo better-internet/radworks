@@ -44,7 +44,7 @@
       <img class="dove" src="img/flying-dove.gif" alt="flying dove gif" />
       <div class="twitter">
         <p>Keep up with our tweets</p>
-        <a href="https://twitter.com/rad_gov" target="_blank">
+        <a href="https://twitter.com/radworks_" target="_blank">
           <Button>Follow us on Twitter</Button>
         </a>
       </div>
