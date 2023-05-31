@@ -8,16 +8,6 @@
   import Window from '$lib/components/window/window.svelte';
 </script>
 
-<svelte:head>
-  <title>Radworks</title>
-  <meta
-    name="description"
-    content="Radworks funds new technologies to cultivate internet freedom."
-  />
-  <meta property="og:image" content="/img/og-share.png" />
-  <meta property="twitter:image" content="/img/twitter-share.png" />
-</svelte:head>
-
 <div>
   <div class="hero" data-theme="dark">
     <div>
