@@ -14,6 +14,8 @@
     name="description"
     content="Radworks funds new technologies to cultivate internet freedom."
   />
+  <meta property="og:image" content="/img/og-share.png" />
+  <meta property="twitter:image" content="/img/twitter-share.png" />
 </svelte:head>
 
 <div>
