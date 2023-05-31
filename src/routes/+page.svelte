@@ -106,7 +106,9 @@
           <img class="blog-image" src="img/silver-liquid.gif" alt="liquid metal gif" />
           <h3>Mirror, <span class="open">mirror</span></h3>
           <p>Get updates and insights.</p>
-          <Button>Read the blog</Button>
+          <a href="https://radworks.mirror.xyz/" target="_blank">
+            <Button>Read the blog</Button>
+          </a>
         </Window>
       </div>
     </div>
