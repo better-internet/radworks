@@ -70,7 +70,7 @@
             <Button>Check out Drips</Button>
           </a>
         </div>
-        <p class="subheader">A toolkit for automatic, recurring payments.</p>
+        <p class="subheader">A p2p fund sharing & splitting solution.</p>
         <img class="project-image" src="./img/drips@2x.png" alt="" />
       </div>
     </div>
