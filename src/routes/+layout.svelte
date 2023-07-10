@@ -20,6 +20,7 @@
     property="og:image"
     content="https://cerulean-cupcake-d1ed95.netlify.app/img/og-share.png"
   />
+  <meta property="twitter:title" content="Radworks" />
   <meta
     property="twitter:image"
     content="https://cerulean-cupcake-d1ed95.netlify.app/img/twitter-share.png"
