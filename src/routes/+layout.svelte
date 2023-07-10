@@ -22,6 +22,10 @@
   />
   <meta property="twitter:title" content="Radworks" />
   <meta
+    name="twitter:description"
+    content="Radworks funds new technologies to cultivate internet freedom."
+  />
+  <meta
     property="twitter:image"
     content="https://cerulean-cupcake-d1ed95.netlify.app/img/twitter-share.png"
   />
