@@ -24,6 +24,7 @@
     property="twitter:image"
     content="https://cerulean-cupcake-d1ed95.netlify.app/img/twitter-share.png"
   />
+  <meta property="twitter:card" content="summary_large_image" />
 </svelte:head>
 
 <div class="wrapper" data-theme={$themeStore.currentTheme} data-primary-color={$primaryColor}>
