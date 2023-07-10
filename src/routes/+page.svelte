@@ -28,12 +28,12 @@
           <p class="chat-message incoming" data-theme="dark">Let’s chat on Discord!</p>
           <img
             class="outgoing chat-message"
-            src="img/keyboard-kid.gif"
-            alt="kid smashing keyboard"
+            src="img/house-plant.gif"
+            alt="animation of multiple houseplants"
           />
           <p class="chat-message outgoing" data-theme="dark">Waddap</p>
         </div>
-        <a href="https://discord.gg/radicle" target="_blank">
+        <a href="https://discord.gg/radworks" target="_blank">
           <Button>Check out the Discord</Button>
         </a>
       </Window>
@@ -84,7 +84,7 @@
             <ForumIllustration />
           </div>
           <h3>Hash out ideas</h3>
-          <a href="http://radicle.community/" target="_blank">
+          <a href="http://community.radworks.org/" target="_blank">
             <Button>Visit the forum</Button>
           </a>
         </Window>
