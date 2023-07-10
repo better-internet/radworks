@@ -22,7 +22,7 @@
   />
   <meta property="twitter:title" content="Radworks" />
   <meta
-    name="twitter:description"
+    property="twitter:description"
     content="Radworks funds new technologies to cultivate internet freedom."
   />
   <meta
