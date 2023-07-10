@@ -103,7 +103,7 @@
       <div class="governance">
         <Window title="Vote">
           <p>Get involved in<br />governance.</p>
-          <a href="https://boardroom.io/radicle/proposals" target="_blank">
+          <a href="https://boardroom.io/radworks/proposals" target="_blank">
             <Button>Vote here</Button>
           </a>
         </Window>
@@ -114,7 +114,7 @@
           <img class="blog-image" src="img/silver-liquid.gif" alt="liquid metal gif" />
           <h3>Mirror, <span class="open">mirror</span></h3>
           <p>Get updates and insights.</p>
-          <a href="https://radworks.mirror.xyz/" target="_blank">
+          <a href="https://radicle.mirror.xyz/" target="_blank">
             <Button>Read the blog</Button>
           </a>
         </Window>
