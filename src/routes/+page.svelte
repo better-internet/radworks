@@ -93,7 +93,7 @@
         <Window icon={JobsIcon} title="Open positions" greenGlow>
           <h2>Work here</h2>
           <a
-            href="https://forest-text-046.notion.site/Join-RadicleDAO-12d6577fcc9d455b8626b2134e5166a8"
+            href="https://www.notion.so/forest-text-046/Join-Radworks-293d87eb4f1e4b7b86137a847254951e?pvs=4"
             target="_blank"
           >
             <Button>View open positions</Button>
