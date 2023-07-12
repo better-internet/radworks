@@ -29,7 +29,7 @@
           </Window>
         </div>
         <div class="drips-brand">
-          <Window title="drips-brand.zip" class="drips-brand">
+          <Window title="drips-brand.zip">
             <img src="/brand/drips-logo.svg" alt="Drips logo" />
             <h3>Drips</h3>
             <p>
