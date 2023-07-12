@@ -85,11 +85,11 @@
 
   .brand-guides {
     gap: 10%;
-	white-space-collapse: break-spaces;
-}
+    white-space-collapse: break-spaces;
+  }
 
   .radworks-brand {
-	grid-column-start: 2;
+    grid-column-start: 2;
     grid-row-start: 5;
   }
 
@@ -123,11 +123,9 @@
     margin: 0 0 32px 0;
   }
 
-
   img {
     pointer-events: none;
   }
-
 
   @media screen and (min-width: 1920px) {
     .hero {
@@ -152,15 +150,12 @@
     .hero div {
       width: 100%;
     }
-
-
   }
-
 
   @media screen and (max-width: 540px) {
     .hero {
       padding: 16px;
       padding-bottom: 272px;
     }
-
+  }
 </style>
