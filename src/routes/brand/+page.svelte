@@ -4,18 +4,20 @@
 </script>
 
 <div class="hero" data-theme="dark">
-  <h1 class="big">
-    The Brand <span class="open">Center</span>
-  </h1>
-  <p>
-    <br />If you need logos, colors, fonts, or illustrations for any of the Radworks brands, you're
-    in the right place.
-  </p>
+  <div>
+    <h1 class="big">
+      The Brand <span class="open">Center</span>
+    </h1>
+    <p>
+      <br />If you need logos, colors, fonts, or illustrations for any of the Radworks brands,
+      you're in the right place.
+    </p>
+  </div>
 </div>
 
 <div class="brand-guides">
   <div class="radworks-brand">
-    <Window title="radworks-brand.zip">
+    <Window maxWidth={500} title="radworks-brand.zip">
       <img src="/brand/radworks-logo.svg" alt="Radworks logo" />
       <h3>Radworks</h3>
       <p>
@@ -28,7 +30,7 @@
     </Window>
   </div>
   <div class="drips-brand">
-    <Window title="drips-brand.zip">
+    <Window maxWidth={600} title="drips-brand.zip">
       <img src="/brand/drips-logo.svg" alt="Drips logo" />
       <h3>Drips</h3>
       <p>
@@ -40,7 +42,7 @@
     </Window>
   </div>
   <div class="radicle-brand">
-    <Window title="radicle-brand.zip">
+    <Window maxWidth={500} title="radicle-brand.zip">
       <img src="/brand/radicle-logo.svg" alt="Radicle logo" />
       <h3>Radicle</h3>
       <p>
@@ -74,19 +76,67 @@
     margin: 0;
   }
 
+  .hero {
+    background-color: var(--color-foreground-level-2);
+    color: var(--color-foreground);
+    padding: 24px 24px 128px 24px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .hero div {
+    width: 50%;
+  }
+
   .brand-guides {
-    width: 600px;
     display: flex;
     flex-direction: column;
+    margin-top: -64px;
+    padding: 24px;
+    padding-bottom: 64px;
+    gap: 24px;
   }
 
   img {
     pointer-events: none;
   }
 
+  .radworks-brand,
+  .drips-brand,
+  .radicle-brand {
+    display: flex;
+  }
+
+  .radworks-brand {
+    padding-left: 5vw;
+  }
+
+  .drips-brand {
+    padding-left: 50vw;
+    padding-right: 24px;
+  }
+
+  .radicle-brand {
+    padding-left: 10vw;
+  }
+
   @media screen and (max-width: 800px) {
+    .hero div {
+      width: 100%;
+    }
+
     h1 {
       font-size: 10vw;
+    }
+
+    .radworks-brand,
+    .drips-brand,
+    .radicle-brand {
+      padding: 0;
+    }
+
+    .brand-guides {
+      padding: 0;
     }
   }
 </style>

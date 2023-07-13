@@ -5,6 +5,7 @@
   export let title: string | undefined = undefined;
   export let icon: ComponentType | undefined = undefined;
   export let greenGlow = false;
+  export let maxWidth: number | undefined = undefined;
 
   let windowElem: HTMLDivElement;
 
@@ -91,6 +92,7 @@
 <div class="wrapper">
   <div
     class="window"
+    style:max-width="{maxWidth}px"
     class:hover
     bind:this={windowElem}
     on:mousedown={startDragging}
