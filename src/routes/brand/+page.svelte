@@ -46,7 +46,7 @@
       <img src="/brand/radicle-logo.svg" alt="Radicle logo" />
       <h3>Radicle</h3>
       <p>
-        The token logo, colors, fonts, brand assets like our history timeline or organizational
+        The space invader, logotype, colors, fonts, and other brand assets like ASCII informational
         diagrams.
       </p>
       <a href="/brand/radicle-brand.zip" target="_blank">
