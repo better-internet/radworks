@@ -1,16 +1,19 @@
 <script>
+  import { page } from '$app/stores';
   import Logo from '../illustrations/logo.svelte';
   import NavLink from '../nav-link/nav-link.svelte';
+
+  let logoLink = $page.route.id !== '/' ? '/' : undefined;
 </script>
 
 <header data-theme="dark">
-  <div class="logo">
+  <a href={logoLink} class="logo">
     <div class="icon"><Logo /></div>
     <span class="wordmark">rad<span class="open">works</span></span>
-  </div>
+  </a>
   <nav>
     <NavLink href="https://docs.radworks.org/" target="_blank">About</NavLink>
-    <NavLink href="#projects">Projects</NavLink>
+    <NavLink href="/#projects">Projects</NavLink>
     <NavLink href="https://radicle.mirror.xyz" target="_blank">Blog</NavLink>
     <NavLink href="https://twitter.com/radworks_" target="_blank">Twitter</NavLink>
     <NavLink href="https://discord.gg/radworks" target="_blank">Discord</NavLink>
@@ -33,6 +36,9 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    text-decoration: none;
+    color: var(--color-foreground);
+    -webkit-tap-highlight-color: transparent;
   }
 
   .logo .icon {
