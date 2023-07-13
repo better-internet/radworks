@@ -5,7 +5,7 @@
 <footer>
   <nav>
     <NavLink href="https://docs.radworks.org/" target="_blank">Docs</NavLink>
-    <NavLink href="/brand" target="_blank">Brand</NavLink>
+    <NavLink href="/brand">Brand</NavLink>
     <NavLink href="https://radicle.xyz/" target="_blank">Radicle</NavLink>
     <NavLink href="https://drips.network/" target="_blank">Drips</NavLink>
     <NavLink href="https://twitter.com/radworks_" target="_blank">Twitter</NavLink>
