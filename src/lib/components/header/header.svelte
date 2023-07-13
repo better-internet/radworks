@@ -1,13 +1,10 @@
 <script>
-  import { page } from '$app/stores';
   import Logo from '../illustrations/logo.svelte';
   import NavLink from '../nav-link/nav-link.svelte';
-
-  let logoLink = $page.route.id !== '/' ? '/' : undefined;
 </script>
 
 <header data-theme="dark">
-  <a href={logoLink} class="logo">
+  <a href="/" class="logo">
     <div class="icon"><Logo /></div>
     <span class="wordmark">rad<span class="open">works</span></span>
   </a>
