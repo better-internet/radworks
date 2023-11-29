@@ -103,7 +103,7 @@
       <div class="governance">
         <Window title="Vote">
           <p>Get involved in<br />governance.</p>
-          <a href="https://boardroom.io/radworks/proposals" target="_blank">
+          <a href="https://www.tally.xyz/gov/radworks" target="_blank">
             <Button>Vote here</Button>
           </a>
         </Window>
