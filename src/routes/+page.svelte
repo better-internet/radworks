@@ -1,10 +1,12 @@
 <script>
   import Button from '$lib/components/button/button.svelte';
   import DiscordIcon from '$lib/components/illustrations/discord-icon.svelte';
-  import ForumIllustration from '$lib/components/illustrations/forum-illustration.svelte';
   import PixelPen from '$lib/components/illustrations/pixel-pen.svelte';
   import JobsIcon from '$lib/components/illustrations/jobs-icon.svelte';
-  import TwitterIcon from '$lib/components/illustrations/twitter-icon.svelte';
+  import XIcon from '$lib/components/illustrations/x-icon.svelte';
+  import IllustrationHost from '$lib/components/illustrations/illustration-host.svelte';
+  import IllustrationCollaborate from '$lib/components/illustrations/illustration-collaborate.svelte';
+  import IllustrationReward from '$lib/components/illustrations/illustration-reward.svelte';
   import Window from '$lib/components/window/window.svelte';
 </script>
 
@@ -39,46 +41,75 @@
       </Window>
     </div>
     <div>
-      <Window icon={TwitterIcon} title="Twitter">
+      <Window icon={XIcon} title="X • @radworks_">
         <img class="dove" src="img/flying-dove.gif" alt="flying dove gif" />
         <div class="twitter">
-          <p>Keep up with our tweets</p>
-          <a href="https://twitter.com/radworks_" target="_blank">
-            <Button>Follow us on Twitter</Button>
+          <p>Keep up with our posts.</p>
+          <a href="https://x.com/radworks_" target="_blank">
+            <Button>Follow us on X</Button>
           </a>
         </div>
       </Window>
     </div>
   </div>
   <div class="projects" id="projects">
-    <h1>Projects</h1>
+    <h1 class="intro">
+      Radworks enables developers to securely <span>host</span>, <span>collaborate on</span>, and
+      <span>reward</span> open-source code.
+    </h1>
     <div class="projects-container">
       <div class="project">
-        <div class="title-and-link">
-          <h2>Radicle</h2>
+        <div class="info">
+          <h2>Collaborate</h2>
           <a href="https://radicle.xyz/" target="_blank">
             <Button>Check out Radicle</Button>
           </a>
+          <p class="subheader">
+            Radicle is a sovereign peer-to-peer network for code collaboration, built on top of Git.
+          </p>
         </div>
-        <p class="subheader">A p2p network for code collaboration</p>
-        <img class="project-image" src="./img/rad@2x.png" alt="" />
+        <div class="project-image">
+          <IllustrationCollaborate />
+        </div>
       </div>
-      <div class="project drips">
-        <div class="title-and-link">
-          <h2>Drips</h2>
+      <div class="project">
+        <div class="info">
+          <h2>
+            Host
+            <div class="coming-soon">Coming soon!</div>
+          </h2>
+          <a href="https://docs.radworks.org/" target="_blank">
+            <Button>Learn more</Button>
+          </a>
+          <p class="subheader">
+            Radworks powers a network of infrastructure providers that enable reliable hosting and
+            collaboration services for Radicle users.
+          </p>
+        </div>
+        <div class="project-image">
+          <IllustrationHost />
+        </div>
+      </div>
+      <div class="project">
+        <div class="info">
+          <h2>Reward</h2>
           <a href="https://drips.network/" target="_blank">
             <Button>Check out Drips</Button>
           </a>
+          <p class="subheader">
+            Drips is a decentralized toolkit for funding critical software dependencies.
+          </p>
         </div>
-        <p class="subheader">A p2p fund sharing & splitting solution</p>
-        <img class="project-image" src="./img/drips@2x.png" alt="" />
+        <div class="project-image">
+          <IllustrationReward />
+        </div>
       </div>
     </div>
   </div>
   <div class="resources">
     <h1>Resources</h1>
     <div class="resources-container">
-      <div class="forum">
+      <!-- <div class="forum">
         <Window>
           <div class="forum-image">
             <ForumIllustration />
@@ -88,7 +119,7 @@
             <Button>Visit the forum</Button>
           </a>
         </Window>
-      </div>
+      </div> -->
       <div class="jobs">
         <Window icon={JobsIcon} title="Open positions" greenGlow>
           <h2>Work here</h2>
@@ -271,51 +302,81 @@
 
   .projects {
     background-color: var(--color-background);
-    padding: 32px;
+    padding: 5vw;
     margin-bottom: 140px;
   }
 
   .projects-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-    margin-top: 48px;
+    padding: 5rem 0;
   }
 
-  .drips {
-    margin-top: 198px;
+  .projects h1.intro {
+    text-align: center;
+    color: var(--color-foreground);
+    font-size: 2rem;
+    font-family: Terminal Grotesque;
+    text-wrap: balance;
+    line-height: 100%;
+    margin-top: 2rem;
+  }
+
+  .projects h1.intro span {
+    font-family: Terminal Grotesque Open;
+  }
+
+  .project {
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+
+  .project:nth-child(2n) {
+    flex-direction: row;
   }
 
   .project h2 {
-    font-size: 112px;
+    font-size: 6vw;
   }
 
-  .project .title-and-link {
+  .project .info {
     display: flex;
-    gap: 24px;
-    align-items: center;
-    padding-left: 24px;
+    gap: 1rem;
+    flex-direction: column;
+    width: 50%;
   }
 
   .project p.subheader {
     display: flex;
     align-items: center;
-    padding: 6px 24px;
+    padding: 16px;
     width: -webkit-fit-content;
     width: fit-content;
     color: var(--color-foreground);
     background: var(--color-background);
     box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 60px;
+    border-radius: 16px;
     position: relative;
     z-index: 1;
+    margin: 0;
+    /* text-wrap: balance; */
+  }
+
+  .coming-soon {
+    display: flex;
+    align-items: center;
+    background: var(--color-caution);
+    width: 4.5rem;
+    height: 4.5rem;
+    text-align: center;
+    font-family: Terminal Grotesque;
+    border-radius: 100%;
+    transform: rotate(15deg);
+    font-size: 1rem;
   }
 
   .project-image {
-    filter: drop-shadow(24px 20px 68px rgba(0, 0, 0, 0.25));
-    border-radius: 4px 4px 24px 24px;
-    object-fit: 'contain';
-    width: 100%;
+    width: 50%;
   }
 
   .resources {
@@ -344,7 +405,7 @@
     margin: 0 0 20px 0;
   }
 
-  .forum {
+  /* .forum {
     grid-column-start: 2;
     grid-row-start: 5;
     position: relative;
@@ -359,16 +420,16 @@
     position: absolute;
     top: -120px;
     left: -10px;
-  }
+  } */
 
   .jobs {
-    grid-column-start: 7;
+    grid-column-start: 2;
     grid-row-start: 1;
   }
 
   .blog {
     position: relative;
-    grid-column-start: 6;
+    grid-column-start: 4;
     grid-row-start: 11;
   }
 
@@ -382,7 +443,7 @@
   .governance {
     position: relative;
     grid-column-start: 10;
-    grid-row-start: 9;
+    grid-row-start: 7;
   }
   .governance p {
     margin-top: 0px;
@@ -397,12 +458,6 @@
   }
 
   @media screen and (max-width: 1060px) {
-    .projects-container {
-      grid-template-columns: 1fr;
-    }
-    .drips {
-      margin-top: 0;
-    }
     .resources h1 {
       margin-top: 0px;
       padding-bottom: 0px;
@@ -432,8 +487,22 @@
       font-size: 10vw;
     }
 
+    .project-image {
+      width: 100%;
+    }
+
+    .project,
+    .project:nth-child(2n) {
+      flex-direction: column-reverse;
+      gap: 0;
+    }
+
     .project h2 {
-      font-size: 15vw;
+      font-size: 8vw;
+    }
+
+    .project .info {
+      width: auto;
     }
 
     .hero {
@@ -498,7 +567,7 @@
       align-items: flex-start;
     }
 
-    .project .title-and-link {
+    .project .info {
       padding-left: 0;
       flex-direction: column;
       align-items: baseline;

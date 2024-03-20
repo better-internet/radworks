@@ -10,7 +10,7 @@
   </a>
   <nav>
     <NavLink href="https://docs.radworks.org/" target="_blank">About</NavLink>
-    <NavLink href="/#projects">Projects</NavLink>
+    <!-- <NavLink href="/#projects">Projects</NavLink> -->
     <NavLink href="https://radworks.mirror.xyz" target="_blank">Blog</NavLink>
     <NavLink href="https://twitter.com/radworks_" target="_blank">Twitter</NavLink>
     <NavLink href="https://discord.gg/radworks" target="_blank">Discord</NavLink>
