@@ -1,7 +1,6 @@
 <script>
   import Button from '$lib/components/button/button.svelte';
   import DiscordIcon from '$lib/components/illustrations/discord-icon.svelte';
-  import PixelPen from '$lib/components/illustrations/pixel-pen.svelte';
   import JobsIcon from '$lib/components/illustrations/jobs-icon.svelte';
   import XIcon from '$lib/components/illustrations/x-icon.svelte';
   import IllustrationHost from '$lib/components/illustrations/illustration-host.svelte';
@@ -12,16 +11,12 @@
 
 <div>
   <div class="hero" data-theme="dark">
-    <div>
-      <p class="big">
-        We fund <span class="open">new technologies</span> to cultivate
-        <span class="open">internet freedom</span>.
-      </p>
-      <a href="https://docs.radworks.org" target="_blank">
-        <Button>Learn more</Button>
-      </a>
-      <div class="pen-illustration"><PixelPen /></div>
-    </div>
+    <p class="big">
+      We’re building a <span class="open">sovereign developer stack</span>.
+    </p>
+    <a href="https://docs.radworks.org" target="_blank">
+      <Button>Learn more</Button>
+    </a>
   </div>
   <div class="social-windows">
     <div>
@@ -74,10 +69,7 @@
       </div>
       <div class="project">
         <div class="info">
-          <h2>
-            Host
-            <div class="coming-soon">Coming soon!</div>
-          </h2>
+          <h2>Host</h2>
           <a href="https://docs.radworks.org/" target="_blank">
             <Button>Learn more</Button>
           </a>
@@ -85,6 +77,7 @@
             Radworks powers a network of infrastructure providers that enable reliable hosting and
             collaboration services for Radicle users.
           </p>
+          <div class="coming-soon">Coming soon!</div>
         </div>
         <div class="project-image">
           <IllustrationHost />
@@ -107,7 +100,6 @@
     </div>
   </div>
   <div class="resources">
-    <h1>Resources</h1>
     <div class="resources-container">
       <!-- <div class="forum">
         <Window>
@@ -161,9 +153,7 @@
 
   h1 {
     font-family: Terminal Grotesque Open;
-    font-size: 76px;
     font-weight: 400;
-    line-height: 62px;
     margin: 0;
     color: var(--color-primary);
   }
@@ -186,43 +176,17 @@
   }
 
   .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-      'hero hero'
-      'socials socials';
     display: flex;
-    grid-area: hero;
-    display: flex;
-    justify-content: flex-end;
     background-color: var(--color-foreground-level-2);
     padding: 32px;
     color: var(--color-foreground);
     padding-bottom: 256px;
     margin-bottom: -256px;
-  }
-
-  .hero div {
-    width: 50%;
-    position: relative;
-  }
-
-  .hero div p {
-    max-width: 576px;
-  }
-
-  .hero p {
-    margin: 0 0 32px 0;
-  }
-
-  .hero .pen-illustration {
-    height: 32px;
-    position: absolute;
-    bottom: 8px;
-    left: -84px;
-    pointer-events: none;
-    width: fit-content;
+    justify-content: center;
+    text-align: center;
+    text-wrap: balance;
+    gap: 2vw;
+    flex-direction: column;
   }
 
   .social-windows {
@@ -308,12 +272,14 @@
 
   .projects-container {
     padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
   }
 
   .projects h1.intro {
     text-align: center;
     color: var(--color-foreground);
-    font-size: 2rem;
     font-family: Terminal Grotesque;
     text-wrap: balance;
     line-height: 100%;
@@ -373,6 +339,11 @@
     border-radius: 100%;
     transform: rotate(15deg);
     font-size: 1rem;
+    align-self: end;
+    position: relative;
+    top: -50px;
+    right: 30px;
+    z-index: 100;
   }
 
   .project-image {
@@ -382,11 +353,6 @@
   .resources {
     background-color: var(--color-foreground-level-2);
     padding: 32px;
-  }
-
-  .resources h1 {
-    margin-top: -240px;
-    padding-bottom: 60px;
   }
 
   .resources-container {
@@ -401,8 +367,8 @@
 
   .jobs h2 {
     color: var(--color-foreground);
-    font-size: 76px;
     margin: 0 0 20px 0;
+    font-size: 4vw;
   }
 
   /* .forum {
@@ -429,8 +395,8 @@
 
   .blog {
     position: relative;
-    grid-column-start: 4;
-    grid-row-start: 11;
+    grid-column-start: 5;
+    grid-row-start: 8;
   }
 
   .blog .blog-image {
@@ -443,7 +409,7 @@
   .governance {
     position: relative;
     grid-column-start: 10;
-    grid-row-start: 7;
+    grid-row-start: 4;
   }
   .governance p {
     margin-top: 0px;
@@ -458,11 +424,6 @@
   }
 
   @media screen and (max-width: 1060px) {
-    .resources h1 {
-      margin-top: 0px;
-      padding-bottom: 0px;
-    }
-
     .resources-container {
       display: flex;
       flex-direction: column;
@@ -483,10 +444,6 @@
   }
 
   @media screen and (max-width: 800px) {
-    h1 {
-      font-size: 10vw;
-    }
-
     .project-image {
       width: 100%;
     }
@@ -512,16 +469,6 @@
         'hero'
         'socials';
       justify-content: flex-start;
-    }
-
-    .hero div {
-      width: 100%;
-    }
-
-    .hero .pen-illustration {
-      -webkit-transform: rotateY(180deg);
-      transform: rotateY(180deg);
-      left: 144px;
     }
 
     .social-windows {

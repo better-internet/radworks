@@ -58,6 +58,7 @@
     gap: 32px;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: end;
   }
 
   @media screen and (max-width: 540px) {
@@ -67,6 +68,10 @@
   }
 
   @media screen and (max-width: 800px) {
+    .logo {
+      justify-content: center;
+    }
+
     header {
       flex-direction: column;
       gap: 16px;
@@ -74,6 +79,7 @@
 
     nav {
       gap: 16px;
+      justify-content: center;
     }
   }
 </style>
