@@ -101,17 +101,6 @@
   </div>
   <div class="resources">
     <div class="resources-container">
-      <!-- <div class="forum">
-        <Window>
-          <div class="forum-image">
-            <ForumIllustration />
-          </div>
-          <h3>Hash out ideas</h3>
-          <a href="http://community.radworks.org/" target="_blank">
-            <Button>Visit the forum</Button>
-          </a>
-        </Window>
-      </div> -->
       <div class="jobs">
         <Window icon={JobsIcon} title="Open positions" greenGlow>
           <h2>Work here</h2>
@@ -267,7 +256,6 @@
   .projects {
     background-color: var(--color-background);
     padding: 5vw;
-    margin-bottom: 140px;
   }
 
   .projects-container {
@@ -325,7 +313,6 @@
     position: relative;
     z-index: 1;
     margin: 0;
-    /* text-wrap: balance; */
   }
 
   .coming-soon {
@@ -370,23 +357,6 @@
     margin: 0 0 20px 0;
     font-size: 4vw;
   }
-
-  /* .forum {
-    grid-column-start: 2;
-    grid-row-start: 5;
-    position: relative;
-  }
-
-  .forum h3 {
-    margin-top: 140px;
-    margin-bottom: 8px;
-  }
-
-  .forum .forum-image {
-    position: absolute;
-    top: -120px;
-    left: -10px;
-  } */
 
   .jobs {
     grid-column-start: 2;
