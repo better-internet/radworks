@@ -13,22 +13,17 @@
   <title>Radworks</title>
   <meta
     name="description"
-    content="Radworks funds new technologies to cultivate internet freedom."
+    content="Radworks enables developers to securely host, collaborate on, and reward open-source code."
   />
-  <meta
-    property="og:image"
-    content="https://cerulean-cupcake-d1ed95.netlify.app/img/og-share.png"
-  />
+  <meta property="og:image" content="https://radworks.org/img/og-share.png" />
   <meta property="twitter:title" content="Radworks" />
   <meta
     property="twitter:description"
-    content="Radworks funds new technologies to cultivate internet freedom."
+    content="Radworks enables developers to securely host, collaborate on, and reward open-source code."
   />
-  <meta
-    property="twitter:image"
-    content="https://cerulean-cupcake-d1ed95.netlify.app/img/twitter-share.png"
-  />
+  <meta property="twitter:image" content="https://radworks.org/img/twitter-share.png" />
   <meta property="twitter:card" content="summary_large_image" />
+  <script defer data-domain="radworks.org" src="https://plausible.io/js/script.js"></script>
 </svelte:head>
 
 <div class="wrapper" data-theme={$themeStore.currentTheme} data-primary-color={$primaryColor}>
