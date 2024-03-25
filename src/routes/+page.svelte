@@ -14,9 +14,6 @@
     <p class="big">
       We’re building a <span class="open">sovereign developer stack</span>.
     </p>
-    <a href="https://docs.radworks.org" target="_blank">
-      <Button>Learn more</Button>
-    </a>
   </div>
   <div class="social-windows">
     <div>
