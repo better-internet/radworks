@@ -10,9 +10,8 @@
   </a>
   <nav>
     <NavLink href="https://docs.radworks.org/" target="_blank">About</NavLink>
-    <NavLink href="/#projects">Projects</NavLink>
     <NavLink href="https://radworks.mirror.xyz" target="_blank">Blog</NavLink>
-    <NavLink href="https://twitter.com/radworks_" target="_blank">Twitter</NavLink>
+    <NavLink href="https://x.com/radworks_" target="_blank">X</NavLink>
     <NavLink href="https://discord.gg/radworks" target="_blank">Discord</NavLink>
   </nav>
 </header>
@@ -58,6 +57,7 @@
     gap: 32px;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: end;
   }
 
   @media screen and (max-width: 540px) {
@@ -67,6 +67,10 @@
   }
 
   @media screen and (max-width: 800px) {
+    .logo {
+      justify-content: center;
+    }
+
     header {
       flex-direction: column;
       gap: 16px;
@@ -74,6 +78,7 @@
 
     nav {
       gap: 16px;
+      justify-content: center;
     }
   }
 </style>

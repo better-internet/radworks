@@ -1,25 +1,19 @@
 <script>
   import Button from '$lib/components/button/button.svelte';
   import DiscordIcon from '$lib/components/illustrations/discord-icon.svelte';
-  import ForumIllustration from '$lib/components/illustrations/forum-illustration.svelte';
-  import PixelPen from '$lib/components/illustrations/pixel-pen.svelte';
   import JobsIcon from '$lib/components/illustrations/jobs-icon.svelte';
-  import TwitterIcon from '$lib/components/illustrations/twitter-icon.svelte';
+  import XIcon from '$lib/components/illustrations/x-icon.svelte';
+  import IllustrationHost from '$lib/components/illustrations/illustration-host.svelte';
+  import IllustrationCollaborate from '$lib/components/illustrations/illustration-collaborate.svelte';
+  import IllustrationReward from '$lib/components/illustrations/illustration-reward.svelte';
   import Window from '$lib/components/window/window.svelte';
 </script>
 
 <div>
   <div class="hero" data-theme="dark">
-    <div>
-      <p class="big">
-        We fund <span class="open">new technologies</span> to cultivate
-        <span class="open">internet freedom</span>.
-      </p>
-      <a href="https://docs.radworks.org" target="_blank">
-        <Button>Learn more</Button>
-      </a>
-      <div class="pen-illustration"><PixelPen /></div>
-    </div>
+    <p class="big">
+      We’re building a <span class="open">sovereign developer stack</span>.
+    </p>
   </div>
   <div class="social-windows">
     <div>
@@ -39,56 +33,71 @@
       </Window>
     </div>
     <div>
-      <Window icon={TwitterIcon} title="Twitter">
+      <Window icon={XIcon} title="X • @radworks_">
         <img class="dove" src="img/flying-dove.gif" alt="flying dove gif" />
         <div class="twitter">
-          <p>Keep up with our tweets</p>
-          <a href="https://twitter.com/radworks_" target="_blank">
-            <Button>Follow us on Twitter</Button>
+          <p>Keep up with our posts.</p>
+          <a href="https://x.com/radworks_" target="_blank">
+            <Button>Follow us on X</Button>
           </a>
         </div>
       </Window>
     </div>
   </div>
   <div class="projects" id="projects">
-    <h1>Projects</h1>
+    <h1 class="intro">
+      Radworks enables developers to securely <span>host</span>, <span>collaborate on</span>, and
+      <span>reward</span> open-source code.
+    </h1>
     <div class="projects-container">
       <div class="project">
-        <div class="title-and-link">
-          <h2>Radicle</h2>
+        <div class="info">
+          <h2>Collaborate</h2>
           <a href="https://radicle.xyz/" target="_blank">
             <Button>Check out Radicle</Button>
           </a>
+          <p class="subheader">
+            Radicle is a sovereign peer-to-peer network for code collaboration, built on top of Git.
+          </p>
         </div>
-        <p class="subheader">A p2p network for code collaboration</p>
-        <img class="project-image" src="./img/rad@2x.png" alt="" />
+        <div class="project-image">
+          <IllustrationCollaborate />
+        </div>
       </div>
-      <div class="project drips">
-        <div class="title-and-link">
-          <h2>Drips</h2>
+      <div class="project">
+        <div class="info">
+          <h2>Host</h2>
+          <a href="https://docs.radworks.org/" target="_blank">
+            <Button>Learn more</Button>
+          </a>
+          <p class="subheader">
+            Radworks powers a network of infrastructure providers that enable reliable hosting and
+            collaboration services for Radicle users.
+          </p>
+          <div class="coming-soon">Coming soon!</div>
+        </div>
+        <div class="project-image">
+          <IllustrationHost />
+        </div>
+      </div>
+      <div class="project">
+        <div class="info">
+          <h2>Reward</h2>
           <a href="https://drips.network/" target="_blank">
             <Button>Check out Drips</Button>
           </a>
+          <p class="subheader">
+            Drips is a decentralized toolkit for funding critical software dependencies.
+          </p>
         </div>
-        <p class="subheader">A p2p fund sharing & splitting solution</p>
-        <img class="project-image" src="./img/drips@2x.png" alt="" />
+        <div class="project-image">
+          <IllustrationReward />
+        </div>
       </div>
     </div>
   </div>
   <div class="resources">
-    <h1>Resources</h1>
     <div class="resources-container">
-      <div class="forum">
-        <Window>
-          <div class="forum-image">
-            <ForumIllustration />
-          </div>
-          <h3>Hash out ideas</h3>
-          <a href="http://community.radworks.org/" target="_blank">
-            <Button>Visit the forum</Button>
-          </a>
-        </Window>
-      </div>
       <div class="jobs">
         <Window icon={JobsIcon} title="Open positions" greenGlow>
           <h2>Work here</h2>
@@ -130,9 +139,7 @@
 
   h1 {
     font-family: Terminal Grotesque Open;
-    font-size: 76px;
     font-weight: 400;
-    line-height: 62px;
     margin: 0;
     color: var(--color-primary);
   }
@@ -155,48 +162,22 @@
   }
 
   .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-      'hero hero'
-      'socials socials';
     display: flex;
-    grid-area: hero;
-    display: flex;
-    justify-content: flex-end;
     background-color: var(--color-foreground-level-2);
     padding: 32px;
     color: var(--color-foreground);
     padding-bottom: 256px;
     margin-bottom: -256px;
-  }
-
-  .hero div {
-    width: 50%;
-    position: relative;
-  }
-
-  .hero div p {
-    max-width: 576px;
-  }
-
-  .hero p {
-    margin: 0 0 32px 0;
-  }
-
-  .hero .pen-illustration {
-    height: 32px;
-    position: absolute;
-    bottom: 8px;
-    left: -84px;
-    pointer-events: none;
-    width: fit-content;
+    justify-content: center;
+    text-align: center;
+    text-wrap: balance;
+    gap: 2vw;
+    flex-direction: column;
   }
 
   .social-windows {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     grid-area: socials;
     gap: 10%;
     padding: 98px 8% 0 0;
@@ -271,61 +252,91 @@
 
   .projects {
     background-color: var(--color-background);
-    padding: 32px;
-    margin-bottom: 140px;
+    padding: 5vw;
   }
 
   .projects-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-    margin-top: 48px;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
   }
 
-  .drips {
-    margin-top: 198px;
+  .projects h1.intro {
+    text-align: center;
+    color: var(--color-foreground);
+    font-family: Terminal Grotesque;
+    text-wrap: balance;
+    line-height: 100%;
+    margin-top: 2rem;
+  }
+
+  .projects h1.intro span {
+    font-family: Terminal Grotesque Open;
+  }
+
+  .project {
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+
+  .project:nth-child(2n) {
+    flex-direction: row;
   }
 
   .project h2 {
-    font-size: 112px;
+    font-size: 6vw;
   }
 
-  .project .title-and-link {
+  .project .info {
     display: flex;
-    gap: 24px;
-    align-items: center;
-    padding-left: 24px;
+    gap: 1rem;
+    flex-direction: column;
+    width: 50%;
   }
 
   .project p.subheader {
     display: flex;
     align-items: center;
-    padding: 6px 24px;
+    padding: 16px;
     width: -webkit-fit-content;
     width: fit-content;
     color: var(--color-foreground);
     background: var(--color-background);
     box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 60px;
+    border-radius: 16px;
     position: relative;
     z-index: 1;
+    margin: 0;
+  }
+
+  .coming-soon {
+    display: flex;
+    align-items: center;
+    background: var(--color-caution);
+    width: 4.5rem;
+    height: 4.5rem;
+    text-align: center;
+    font-family: Terminal Grotesque;
+    border-radius: 100%;
+    transform: rotate(15deg);
+    font-size: 1rem;
+    align-self: end;
+    position: relative;
+    top: -50px;
+    right: 30px;
+    z-index: 100;
   }
 
   .project-image {
-    filter: drop-shadow(24px 20px 68px rgba(0, 0, 0, 0.25));
-    border-radius: 4px 4px 24px 24px;
-    object-fit: 'contain';
-    width: 100%;
+    width: 50%;
   }
 
   .resources {
     background-color: var(--color-foreground-level-2);
     padding: 32px;
-  }
-
-  .resources h1 {
-    margin-top: -240px;
-    padding-bottom: 60px;
   }
 
   .resources-container {
@@ -340,36 +351,19 @@
 
   .jobs h2 {
     color: var(--color-foreground);
-    font-size: 76px;
     margin: 0 0 20px 0;
-  }
-
-  .forum {
-    grid-column-start: 2;
-    grid-row-start: 5;
-    position: relative;
-  }
-
-  .forum h3 {
-    margin-top: 140px;
-    margin-bottom: 8px;
-  }
-
-  .forum .forum-image {
-    position: absolute;
-    top: -120px;
-    left: -10px;
+    font-size: 4vw;
   }
 
   .jobs {
-    grid-column-start: 7;
+    grid-column-start: 2;
     grid-row-start: 1;
   }
 
   .blog {
     position: relative;
-    grid-column-start: 6;
-    grid-row-start: 11;
+    grid-column-start: 5;
+    grid-row-start: 8;
   }
 
   .blog .blog-image {
@@ -382,7 +376,7 @@
   .governance {
     position: relative;
     grid-column-start: 10;
-    grid-row-start: 9;
+    grid-row-start: 4;
   }
   .governance p {
     margin-top: 0px;
@@ -397,17 +391,6 @@
   }
 
   @media screen and (max-width: 1060px) {
-    .projects-container {
-      grid-template-columns: 1fr;
-    }
-    .drips {
-      margin-top: 0;
-    }
-    .resources h1 {
-      margin-top: 0px;
-      padding-bottom: 0px;
-    }
-
     .resources-container {
       display: flex;
       flex-direction: column;
@@ -428,12 +411,22 @@
   }
 
   @media screen and (max-width: 800px) {
-    h1 {
-      font-size: 10vw;
+    .project-image {
+      width: 100%;
+    }
+
+    .project,
+    .project:nth-child(2n) {
+      flex-direction: column-reverse;
+      gap: 0;
     }
 
     .project h2 {
-      font-size: 15vw;
+      font-size: 8vw;
+    }
+
+    .project .info {
+      width: auto;
     }
 
     .hero {
@@ -443,16 +436,6 @@
         'hero'
         'socials';
       justify-content: flex-start;
-    }
-
-    .hero div {
-      width: 100%;
-    }
-
-    .hero .pen-illustration {
-      -webkit-transform: rotateY(180deg);
-      transform: rotateY(180deg);
-      left: 144px;
     }
 
     .social-windows {
@@ -478,10 +461,6 @@
   }
 
   @media screen and (min-width: 1582px) {
-    .projects {
-      margin-top: -224px;
-    }
-
     .resources {
       border-radius: 32px 32px 0 0;
     }
@@ -498,7 +477,7 @@
       align-items: flex-start;
     }
 
-    .project .title-and-link {
+    .project .info {
       padding-left: 0;
       flex-direction: column;
       align-items: baseline;

@@ -8,7 +8,7 @@
     <NavLink href="/brand">Brand</NavLink>
     <NavLink href="https://radicle.xyz/" target="_blank">Radicle</NavLink>
     <NavLink href="https://drips.network/" target="_blank">Drips</NavLink>
-    <NavLink href="https://twitter.com/radworks_" target="_blank">Twitter</NavLink>
+    <NavLink href="https://x.com/radworks_" target="_blank">X</NavLink>
     <NavLink href="https://discord.gg/radworks" target="_blank">Discord</NavLink>
   </nav>
 </footer>
