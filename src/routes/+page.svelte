@@ -180,7 +180,7 @@
 
   .social-windows {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     grid-area: socials;
     gap: 10%;
     padding: 98px 8% 0 0;
@@ -464,10 +464,6 @@
   }
 
   @media screen and (min-width: 1582px) {
-    .projects {
-      margin-top: -224px;
-    }
-
     .resources {
       border-radius: 32px 32px 0 0;
     }

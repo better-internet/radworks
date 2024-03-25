@@ -1,19 +1,20 @@
 <svg width="100%" viewBox="0 0 650 540" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <ellipse
-    cx="325.458"
-    cy="243.416"
-    rx="134.183"
-    ry="214.137"
-    transform="rotate(-70.6943 325.458 243.416)"
-    stroke="url(#paint0_linear_1863_373)"
-    stroke-width="6.25"
-  />
+  <circle cx="325.458" cy="243.415" r="214.137" stroke="#28333D" stroke-width="6.25" />
   <ellipse
     cx="325.458"
     cy="243.415"
     rx="74.4993"
     ry="214.137"
     transform="rotate(157.815 325.458 243.415)"
+    stroke="url(#paint0_linear_1863_373)"
+    stroke-width="6.25"
+  />
+  <ellipse
+    cx="325.458"
+    cy="243.416"
+    rx="134.183"
+    ry="214.137"
+    transform="rotate(-70.6943 325.458 243.416)"
     stroke="url(#paint1_linear_1863_373)"
     stroke-width="6.25"
   />
@@ -27,7 +28,6 @@
     stroke="url(#paint2_linear_1863_373)"
     stroke-width="6.25"
   />
-  <circle cx="325.458" cy="243.415" r="214.137" stroke="black" stroke-width="6.25" />
   <g filter="url(#filter0_d_1863_373)">
     <rect
       x="513.889"
@@ -266,7 +266,7 @@
     <linearGradient
       id="paint0_linear_1863_373"
       x1="325.458"
-      y1="29.2783"
+      y1="29.2782"
       x2="325.458"
       y2="548.126"
       gradientUnits="userSpaceOnUse"
@@ -277,7 +277,7 @@
     <linearGradient
       id="paint1_linear_1863_373"
       x1="325.458"
-      y1="29.2782"
+      y1="29.2783"
       x2="325.458"
       y2="548.126"
       gradientUnits="userSpaceOnUse"
