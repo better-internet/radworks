@@ -23,7 +23,11 @@
   />
   <meta property="twitter:image" content="https://radworks.org/img/twitter-share.png" />
   <meta property="twitter:card" content="summary_large_image" />
-  <script defer data-domain="radworks.org" src="https://plausible.io/js/script.js"></script>
+  <script
+    defer
+    data-domain="radworks.org"
+    src="https://plausible.io/js/script.tagged-events.js"
+  ></script>
 </svelte:head>
 
 <div class="wrapper" data-theme={$themeStore.currentTheme} data-primary-color={$primaryColor}>
