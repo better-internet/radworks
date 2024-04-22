@@ -9,10 +9,22 @@
     <span class="wordmark">rad<span class="open">works</span></span>
   </a>
   <nav>
-    <NavLink href="https://docs.radworks.org/" target="_blank">About</NavLink>
-    <NavLink href="https://radworks.mirror.xyz" target="_blank">Blog</NavLink>
-    <NavLink href="https://x.com/radworks_" target="_blank">X</NavLink>
-    <NavLink href="https://discord.gg/radworks" target="_blank">Discord</NavLink>
+    <NavLink href="https://docs.radworks.org/" target="_blank" class="plausible-event-name=NavDocs"
+      >About</NavLink
+    >
+    <NavLink
+      href="https://radworks.mirror.xyz"
+      target="_blank"
+      class="plausible-event-name=NavBlogMirror">Blog</NavLink
+    >
+    <NavLink href="https://x.com/radworks_" target="_blank" class="plausible-event-name=NavXTwitter"
+      >X</NavLink
+    >
+    <NavLink
+      href="https://discord.gg/radworks"
+      target="_blank"
+      class="plausible-event-name=NavDiscord">Discord</NavLink
+    >
   </nav>
 </header>
 

@@ -27,7 +27,11 @@
           />
           <p class="chat-message outgoing" data-theme="dark">Waddap</p>
         </div>
-        <a href="https://discord.gg/radworks" target="_blank">
+        <a
+          href="https://discord.gg/radworks"
+          class="plausible-event-name=MiddleCheckOutTheDiscord"
+          target="_blank"
+        >
           <Button>Check out the Discord</Button>
         </a>
       </Window>
@@ -37,7 +41,11 @@
         <img class="dove" src="img/flying-dove.gif" alt="flying dove gif" />
         <div class="twitter">
           <p>Keep up with our posts.</p>
-          <a href="https://x.com/radworks_" target="_blank">
+          <a
+            href="https://x.com/radworks_"
+            class="plausible-event-name=MiddleFollowUsOnX"
+            target="_blank"
+          >
             <Button>Follow us on X</Button>
           </a>
         </div>
@@ -53,7 +61,11 @@
       <div class="project">
         <div class="info">
           <h2>Collaborate</h2>
-          <a href="https://radicle.xyz/" target="_blank">
+          <a
+            href="https://radicle.xyz/"
+            class="plausible-event-name=MiddleCheckOutRadicle"
+            target="_blank"
+          >
             <Button>Check out Radicle</Button>
           </a>
           <p class="subheader">
@@ -67,7 +79,11 @@
       <div class="project">
         <div class="info">
           <h2>Host</h2>
-          <a href="https://docs.radworks.org/" target="_blank">
+          <a
+            href="https://docs.radworks.org/"
+            class="plausible-event-name=MiddleRSNLearnMore"
+            target="_blank"
+          >
             <Button>Learn more</Button>
           </a>
           <p class="subheader">
@@ -83,7 +99,11 @@
       <div class="project">
         <div class="info">
           <h2>Reward</h2>
-          <a href="https://drips.network/" target="_blank">
+          <a
+            href="https://drips.network/"
+            class="plausible-event-name=MiddleCheckOutDrips"
+            target="_blank"
+          >
             <Button>Check out Drips</Button>
           </a>
           <p class="subheader">
@@ -104,6 +124,7 @@
           <a
             href="https://www.notion.so/forest-text-046/Join-Radworks-293d87eb4f1e4b7b86137a847254951e?pvs=4"
             target="_blank"
+            class="plausible-event-name=FooterViewOpenPositions"
           >
             <Button>View open positions</Button>
           </a>
@@ -112,7 +133,11 @@
       <div class="governance">
         <Window title="Vote">
           <p>Get involved in<br />governance.</p>
-          <a href="https://www.tally.xyz/gov/radworks" target="_blank">
+          <a
+            href="https://www.tally.xyz/gov/radworks"
+            target="_blank"
+            class="plausible-event-name=FooterVoteHere"
+          >
             <Button>Vote here</Button>
           </a>
         </Window>
@@ -123,7 +148,11 @@
           <img class="blog-image" src="img/silver-liquid.gif" alt="liquid metal gif" />
           <h3>Mirror, <span class="open">mirror</span></h3>
           <p>Get updates and insights.</p>
-          <a href="https://radworks.mirror.xyz/" target="_blank">
+          <a
+            href="https://radworks.mirror.xyz/"
+            class="plausible-event-name=FooterReadTheBlog"
+            target="_blank"
+          >
             <Button>Read the blog</Button>
           </a>
         </Window>
