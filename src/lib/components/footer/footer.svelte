@@ -11,6 +11,7 @@
       >Docs
     </NavLink>
     <NavLink href="/brand" class="plausible-event-name=FooterBrand">Brand</NavLink>
+    <NavLink href="/legal" class="plausible-event-name=FooterLegal">Legal</NavLink>
     <NavLink href="https://radicle.xyz/" class="plausible-event-name=FooterRadicle" target="_blank"
       >Radicle
     </NavLink>
