@@ -214,4 +214,8 @@
     margin: 10vh auto;
     padding: 0 2vw;
   }
+
+  a {
+    color: var(--color-primary);
+  }
 </style>
